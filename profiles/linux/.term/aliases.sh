@@ -9,7 +9,7 @@
 # \rm will call the real rm not the alias.
 
 ### [ Temporary ] ----------------------------------------------------------------------------
-#alias tildr='/home/$USER/Projects/github/organizations/orbitbits/tildr/target/x86_64-unknown-linux-gnu/debug/tildr'
+alias tildr='/home/$USER/Projects/github/organizations/orbitbits/tildr/target/x86_64-unknown-linux-gnu/debug/tildr'
 alias catalina='VBoxManage startvm macos-catalina'
 
 
