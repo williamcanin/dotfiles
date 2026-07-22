@@ -1,0 +1,297 @@
+{
+
+  // ===== Plugin: VSCODE CUSTOM CSS =====
+  "vscode_custom_css.imports": ["file:///home/boss/.config/Code/User/custom.css"],
+
+  // ===== APARÊNCIA / UI =====
+  "workbench.colorTheme": "Dark Modern",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+  "workbench.activityBar.location": "default",
+  "workbench.activityBar.compact": true,
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "workbench.tree.enableStickyScroll": false,
+  "breadcrumbs.enabled": false,
+  "symbols.hidesExplorerArrows": false,
+  "explorer.compactFolders": false,
+  "explorer.fileNesting.enabled": true,
+
+  // ===== EDITOR =====
+  "editor.fontFamily": "JetBrains Mono, monospace",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "400",
+  "editor.lineHeight": 1.8,
+  "editor.fontLigatures": true,
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "editor.rulers": [100],
+  "editor.minimap.enabled": true,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.matchBrackets": "always",
+  "editor.guides.indentation": true,
+  "editor.guides.bracketPairs": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.showUnused": true,
+  "editor.semanticHighlighting.enabled": false,
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      "*.mutable": {
+        "underline": false,
+        "bold": true
+      }
+    }
+  },
+
+  // ===== HINTS / HOVER =====
+  "editor.hover.delay": 300,
+  "editor.hover.sticky": false,
+  "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.fontSize": 12,
+  "editor.inlayHints.padding": true,
+  "editor.inlayHints.fontFamily": "Open Sans Medium",
+
+  // ===== STICKY SCROLL =====
+  "editor.stickyScroll.enabled": false,
+  "editor.stickyScroll.scrollWithEditor": false,
+  "terminal.integrated.stickyScroll.enabled": false,
+
+  // ===== ARQUIVOS =====
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 4000,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.css": "scss",
+    "*.lib": "shellscript"
+  },
+  "files.exclude": {
+    "**.egg-info": true,
+    ".pytest_cache": true,
+    ".target": true,
+    ".idea": true,
+    ".tox": true,
+    "**/_gems": true,
+    "**/__pycache__": true,
+    "**/.bundle": true,
+    "**/bundle": true,
+    "**/.sass-cache": true,
+    "**/.jekyll-cache": true,
+    "**/_site": true,
+    "**.idea": true,
+    "**.log": true,
+    "**/*.bak": true,
+    "**.lock": true,
+    "**.yarnrc": true,
+    "**-lock.json": true,
+    "**/env": true,
+    "**/node_modules": true,
+    "**/venv": true,
+    "**/.venv": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+
+  // ===== COMPORTAMENTO =====
+  "window.openFilesInNewWindow": "off",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "ts.updateImportsOnFileMove.enabled": "always",
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // ===== CODE ACTIONS =====
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.suggest.showSnippets": true,
+
+  // ===== TERMINAL =====
+  "terminal.integrated.fontFamily": "DejaVuSansMono Nerd Font",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.gpuAcceleration": "auto",
+  "disable-hardware-acceleration": true,
+
+  // ===== LINUX TERMINAL =====
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "/usr/bin/zsh",
+      "args": ["-l"]
+    }
+  },
+
+  // ===== WINDOWS TERMINAL =====
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+      "args": [
+        "-NoExit",
+        "-Command",
+        "Invoke-Expression (& 'C:\\Program Files\\starship\\bin\\starship.exe' init powershell --print-full-init | Out-String)"
+      ]
+    },
+    "Windows PowerShell": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
+
+  // ===== CORES CUSTOMIZADAS =====
+  "workbench.colorCustomizations": {
+    "editorError.foreground": "#c54d4d",
+    "editorWarning.foreground": "#c0c06d",
+    "editorInfo.foreground": "#8bd5e2",
+    "[Default Dark Modern]": {
+      "editorInlayHint.background": "#272727",
+      "editorInlayHint.foreground": "#757575",
+      "editorInlayHint.typeBackground": "#2e2e2e",
+      "editorBracketMatch.border": "#0000",
+      "editorBracketMatch.background": "#4d4e53"
+    },
+    "[GNOME dark]": {
+      "editorInlayHint.background": "#313131",
+      "editorInlayHint.foreground": "#858383",
+      "editorInlayHint.typeBackground": "#313131",
+      "editorBracketMatch.border": "#0000",
+      "editorBracketMatch.background": "#424351"
+    }
+  },
+
+  // ===== PYTHON =====
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "python.venvPath": "~/.cache/pypoetry/virtualenvs",
+  "python.pythonPath": "/bin/python",
+  "python.linting.flake8Enabled": true,
+  "python.linting.pycodestyleEnabled": false,
+  "python.formatting.provider": "black",
+  "python.linting.maxNumberOfProblems": 100,
+
+  // ===== RUST (rust-analyzer) =====
+  "rust-analyzer.cargo.autoreload": true,
+  "rust-analyzer.cargo.buildScripts.enable": true,
+  "rust-analyzer.cargo.features": "all",
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": true,
+  "rust-analyzer.inlayHints.closingBraceHints.minLines": 25,
+  "rust-analyzer.inlayHints.expressionAdjustmentHints.enable": "always",
+  "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  "rust-analyzer.inlayHints.parameterHints.enable": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": true,
+  "rust-analyzer.semanticHighlighting.doc.comment.inject.enable": true,
+  "rust-analyzer.semanticHighlighting.punctuation.enable": true,
+  "rust-analyzer.hover.actions.enable": true,
+  "rust-analyzer.completion.autoimport.enable": true,
+  "rust-analyzer.files.exclude": ["target"],
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true,
+    "editor.fontWeight": "300",
+    "editor.showUnused": true,
+    "editor.rulers": [80]
+  },
+
+  // ===== OUTRAS LINGUAGENS / FORMATADORES =====
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[markdown]": {
+    "diffEditor.ignoreTrimWhitespace": true
+  },
+
+  // ===== FERRAMENTAS / EXTENSÕES =====
+  "cmake.configureOnOpen": true,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  // ===== AI / CHAT / COPILOT =====
+  "chat.unifiedAgentsBar.enabled": true,
+  "chat.viewSessions.orientation": "stacked",
+  "chatgpt.localeOverride": "pt-BR",
+  "CodeGPT.apiKey": "Ollama",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilotcli:claude-sonnet-4.6",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "txt": false
+  },
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "claudeCode.preferredLocation": "panel",
+  "roo-cline.debug": false,
+  "roo-cline.allowedCommands": ["git log", "git diff", "git show"],
+  "roo-cline.deniedCommands": [],
+
+  // ===== SPELL CHECK (cSpell) =====
+  "cSpell.globRoot": "${workspaceFolder}",
+  "cSpell.ignorePaths": [
+    "**/.config/Code/User/settings.json"
+  ],
+  "cSpell.customDictionaries": {
+    "custom-dictionary-user": {
+      "name": "custom-dictionary-user",
+      "path": "~/.cspell/custom-dictionary-user.txt",
+      "addWords": true,
+      "scope": "user"
+    }
+  },
+
+  // ===== TODO TREE =====
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "type": "text",
+    "foreground": "#ff1e00",
+    "background": "#ffffff",
+    "opacity": 90,
+    "iconColour": "#ffffff"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "type": "line"
+    },
+    "FIXME": {
+      "foreground": "#000000",
+      "iconColour": "#eeff00",
+      "gutterIcon": true
+    }
+  },
+  "yaml.schemas": {
+    "file:///home/boss/.vscode/extensions/continue.continue-1.2.22-linux-x64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ],
+    "file:///home/boss/.vscode/extensions/continue.continue-1.2.24-linux-x64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  },
+  "chat.tips.enabled": false,
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  }
+,
+  "material-code.primaryColor": ""
+}

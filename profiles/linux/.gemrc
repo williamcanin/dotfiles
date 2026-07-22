@@ -1,0 +1,7 @@
+gem: --user-install --no-document
+:benchmark: false
+:update_sources: true
+:verbose: true
+:backtrace: false
+:bulk_threshold: 1000
+

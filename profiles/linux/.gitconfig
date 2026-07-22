@@ -1,0 +1,55 @@
+[user]
+    name = William C. Canin
+    email = william.costa.canin@gmail.com
+    github = williamcanin
+[anom]
+    name = "config user.name 'The 333x2'"
+    email = "config user.email 'the333x2@gmail.com'"
+    github = "config user.github 'the333x2'"
+[http]
+    postBuffer = 104857600
+    # sslCAInfo = /home/wcanin/.certs/squid-cert.pem
+[credential]
+    helper = cache
+[color]
+    ui = auto
+[color "diff"]
+    meta = blue bold
+    frag = magenta bold
+    old  = red bold
+    new  = green bold
+[color "branch"]
+    current = yellow reverse
+    local   = yellow bold
+    remote  = green bold
+    plain   = red bold
+[color "status"]
+    added     = yellow
+    changed   = green bold
+    untracked = blue bold
+[core]
+    excludesfile = /home/boss/.gitignore_global
+    editor = vim
+	autocrlf = input
+[merge]
+    tool = vimdiff
+[web]
+    browser = open
+[push]
+    default = current
+[cola]
+    spellcheck = false
+	startupmode = list
+[init]
+    defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[safe]
+	directory = /data/dotfiles
+	directory = /home/.dotfiles
+	directory = /data/accounts
+[url "file:///seagate/"]
+	insteadOf = hdd:

@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Pesquisar vírus
+Comment=Pesquise por vírus usando o ClamAV
+Exec=clamtk %F
+Icon-Name=clamav
+Selection=any
+Extensions=any;

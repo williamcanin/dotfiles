@@ -1,0 +1,65 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+
+	"Copyright_Notice": {
+		"prefix": "legal",
+		"body": [
+			"Copyright (c) 2019 - William C. Canin. All Rights Reserved.",
+			""
+		],
+		"description": "Copyright Notice"
+	},
+	"Env":{
+		"prefix": "#!",
+		"body": [
+			"#!/usr/bin/env ",
+		],
+		"description": "Env for scripts"		
+	},
+	"Author":{
+		"prefix": "authorinfo",
+		"body": [
+			"# Author:",
+			"#   Name: William C. Canin",
+			"#   E-Mail: william.costa.canin@gmail.com",
+			"#   Website: https://williamcanin.me",
+			"#   Github: https://github.com/williamcanin",
+			""
+		],
+		"description": "Project author information."
+	},
+	"MIT_LICENSE":{
+		"prefix": "mitlicense",
+		"body": [
+			"# MIT License",
+			"",
+			"# Copyright (c) 2019 - William C. Canin",
+			"",
+			"# Permission is hereby granted, free of charge, to any person obtaining a copy",
+			"# of this software and associated documentation files (the \"Software\"), to deal",
+			"# in the Software without restriction, including without limitation the rights",
+			"# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell",
+			"# copies of the Software, and to permit persons to whom the Software is",
+			"# furnished to do so, subject to the following conditions:",
+			"",
+			"# The above copyright notice and this permission notice shall be included in all",
+			"# copies or substantial portions of the Software.",
+			"",
+			"# THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR",
+			"# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,",
+			"# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE",
+			"# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER",
+			"# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,",
+			"# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE",
+			"# SOFTWARE.",
+			""
+		],
+		"description": "MIT License. (https://opensource.org/licenses/MIT)"
+	}
+
+}

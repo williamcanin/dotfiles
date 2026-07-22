@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Excluir (com segurança)
+Comment=Exclua um arquivo ou uma pasta com segurança usando o sTrash
+Exec=strash -n 4 -p "%F"
+Icon-Name=security-high
+Selection=s
+Extensions=any;

@@ -1,0 +1,215 @@
+# Dependencies: Font Awesome 7
+#
+scan_timeout = 50
+command_timeout = 2000
+add_newline = true
+format = """
+$username\
+$hostname\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$docker_context\
+$package\
+$cmake\
+$cobol\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$ocaml\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$custom\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+$character
+"""
+
+[cmd_duration]
+min_time = 5_000
+format = "took [$duration](bold yellow)"
+
+[aws]
+symbol = "  "
+
+[conda]
+disabled = true
+symbol = " "
+
+[dart]
+disabled = true
+symbol = "\ue798 "
+style = "blue"
+version_format = "${raw}"
+
+[directory]
+format = "\ue5fe ($style)[$path]($style)[$read_only]($read_only_style) "
+read_only = " "
+style = "cyan"
+
+[docker_context]
+symbol = "\uf308 "
+style = "cyan"
+
+[elixir]
+disabled = true
+symbol = "\ue62d "
+style = "blue"
+version_format = "${raw}"
+
+[elm]
+disabled = true
+symbol = " "
+version_format = "${raw}"
+
+[golang]
+symbol = "\ue627 "
+style = "cyan"
+version_format = "${raw}"
+
+[hg_branch]
+symbol = " "
+
+[java]
+disabled = true
+symbol = "\ue256 "
+style = "red"
+version_format = "${raw}"
+
+[julia]
+disabled = true
+symbol = " "
+style = "blue"
+version_format = "${raw}"
+
+[memory_usage]
+symbol = " "
+
+[nim]
+disabled = true
+symbol = "\uf6a4 "
+style = "yellow"
+version_format = "${raw}"
+
+[nodejs]
+style = "green"
+version_format = "${raw}"
+
+[nix_shell]
+disabled = true
+symbol = " "
+
+[package]
+disabled = true
+symbol = "\uf8d6 "
+style = "red"
+version_format = "${raw}"
+
+[perl]
+symbol = "\ue769 "
+style = "blue"
+version_format = "${raw}"
+
+[php]
+symbol = "\ue608 "
+style = "blue"
+version_format = "${raw}"
+
+[python]
+symbol = "\uf81f "
+style = "yellow"
+version_format = "${raw}"
+
+[ruby]
+symbol = "\ue21e "
+style = "red"
+version_format = "${raw}"
+
+[rust]
+symbol = "\ue7a8 "
+style = "red"
+version_format = "${raw}"
+
+[scala]
+disabled = true
+symbol = "\ue737 "
+style = "red"
+version_format = "${raw}"
+
+[swift]
+disabled = true
+symbol = "ﯣ "
+version_format = "${raw}"
+
+[character]
+success_symbol = "[\uf0da](green)"
+error_symbol = "[\uf0da](red)"
+disabled = false
+
+[git_branch]
+symbol = "\ue725 "
+style = "cyan"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[o PICKING](bold red)"
+
+[git_metrics]
+disabled = false
+format = "([+$added](- green) [-$deleted](- red))"
+
+[git_status]
+style = "blue"
+conflicted = "="
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+untracked = "?"
+stashed = "$"
+modified = "!"
+renamed = "»"
+deleted = "✘"

@@ -1,0 +1,43 @@
+[global_config]
+  inactive_color_offset = 0.61
+[keybindings]
+  copy = <Primary>c
+  paste = <Primary>v
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_darkness = 1.0
+    cursor_shape = underline
+    font = DejaVuSansMono Nerd Font 14
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollback_infinite = True
+    palette = "#000000:#ff5555:#50fa7b:#f1fa8c:#bd93f9:#ff79c6:#8be9fd:#bbbbbb:#555555:#ff5555:#50fa7b:#f1fa8c:#bd93f9:#ff79c6:#8be9fd:#ffffff"
+    use_system_font = False
+    copy_on_selection = True
+  [[grey]]
+    icon_bell = False
+    background_darkness = 0.63
+    background_type = transparent
+    cursor_shape = underline
+    font = DejaVuSansMono Nerd Font 13
+    foreground_color = "#00ff00"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    use_system_font = False
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      command = ""
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      type = Window
+      parent = ""
+      profile = None
+      size = 1300, 700
+[plugins]

@@ -1,0 +1,280 @@
+;; Ref: https://github.com/polybar/polybar/wiki
+
+;; Dependencies: pcmanfm,
+
+[bar/mybar]
+;background = #1d1f21
+;foreground = #15ddc2
+background = #000000
+foreground = #23ea33
+;#26e730
+;background = #26e730
+;foreground = #000000
+width = 100%
+height = 24
+radius = 0
+tray-position = right
+;tray-padding = 3
+;tray-detached = true
+;tray-offset-x = -12
+;tray-offset-y = 0
+;tray-transparent = true
+tray-foreground = ${root.foreground}
+tray-background = ${root.background}
+;override-redirect = true
+fixed-center = true
+;offset-y = 1px
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+scroll-up = i3-msg workspace next_on_output
+scroll-down = i3-msg workspace prev_on_output
+font-0 = "Source Code Pro Semibold:size=10;1"
+font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
+font-2 = "Font Awesome 5 Brands:size=10;1"
+;modules-left = xwindow
+modules-left = browser manager-files i3
+modules-right = memory separator update-system separator temperature separator xkeyboard separator pulseaudio separator calendar-google separator clock separator
+cursor-click = pointer
+format-underline =
+format-background =
+format-padding =
+
+[module/separator]
+type = custom/text
+content = "   "
+
+[module/browser]
+type = custom/text
+content = "  "
+click-left = exec google-chrome-stable &
+
+[module/manager-files]
+type = custom/text
+content = "  "
+;click-left = exec pcmanfm &
+click-left = exec nemo &
+
+;[module/battery]
+;type = internal/battery
+;full-at = 99
+;; Use the following command to list batteries and adapters:
+;;$ ls -1 /sys/class/power_supply/
+;battery =
+;adapter =
+;poll-interval = 5
+
+[module/pulseaudio-control]
+type = custom/script
+tail = true
+label=%output%
+;label-foreground = #FFFFFF
+format-underline = #333333
+exec = ~/.config/polybar/scripts/pulseaudio_control.bash listen
+click-right = exec pavucontrol &
+click-left = ~/.config/polybar/scripts/pulseaudio_control.bash togmute
+click-middle = ~/.config/polybar/scripts/pulseaudio_control.bash next-sink
+scroll-up = ~/.config/polybar/scripts/pulseaudio_control.bash up
+scroll-down = ~/.config/polybar/scripts/pulseaudio_control.bash down
+label-padding = 2
+;label-foreground = ${colors.foreground}
+
+;[module/filesystem]
+;type = internal/fs
+;mount-0 = /home
+;;mount-1 = /
+;interval = 30
+;fixed-values = false
+;spacing = 1
+;format-mounted = <label-mounted>
+;format-unmounted = <label-unmounted>
+;;label-mounted = %mountpoint%: %free% of %total%
+;label-mounted = %mountpoint%: %free%
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+strip-wsnumbers = true
+index-sort = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+reverse-scroll = false
+fuzzy-match = true
+format = <label-state> <label-mode>
+label-mode = %mode%
+label-mode-padding = 2
+label-focused = %index%
+label-focused-foreground = #ffffff
+label-focused-padding = 2
+label-unfocused = %index%
+label-unfocused-padding = 2
+label-visible = %index%
+label-visible-padding = 2
+label-urgent = %index%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 2
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+base-temperature = 47
+warn-temperature = 82
+units = false
+format = <ramp> <label>
+format-warn = <label-warn>
+format-padding = 0
+label = %temperature-c%°C
+label-warn = %temperature-c%°C
+label-warn-foreground = #f00
+format-warn-padding = 1
+ramp-0 =  
+ramp-1 = 
+ramp-2 = 
+; ramp-foreground = #ffffff
+click-left = exec xfce4-sensors &
+
+;[module/wlan]
+;type = internal/network
+;interface = wlp7s0
+;interval = 3.0
+;format-connected = <ramp-signal> <label-connected>
+;format-connected = <ramp-signal>
+;format-connected-foreground = #ffffff
+;format-connected-background = #1d1f21
+;format-connected-padding = 1
+;label-connected = %essid%
+;format-disconnected =
+;ramp-signal-0 = 
+;ramp-signal-1 = 
+;ramp-signal-2 = 
+;ramp-signal-3 = 
+;ramp-signal-4 = 
+;ramp-signal-foreground = #ffffff
+
+;[module/network-networkmanager]
+;; Font: https://github.com/polybar/polybar-scripts/tree/master/polybar-scripts/network-networkmanager
+;type = custom/script
+;interval = 5
+;exec = ~/.config/polybar/scripts/network_networkmanager.sh
+;tail = true
+;;click-left = exec gnome-control-center network &
+;click-left = exec terminator --command="nmcli connection show | less" &
+
+;[module/eth]
+;type = internal/network
+;interface = eno1
+;interval = 3.0
+;format-connected-padding = 2
+;format-connected-foreground = ${colors.foreground}
+;format-connected-background = ${colors.background}
+;format-connected-prefix = " "
+;label-connected = %local_ip%
+;format-disconnected =
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+format = <label-layout>
+format-spacing = 0
+label-layout = %icon%
+label-layout-padding = 0
+layout-icon-0 = br; br
+layout-icon-1 = us; us
+
+[module/memory]
+type = internal/memory
+interval = 3
+format = <label>
+;format = <label> <bar-used>
+;format = RAM <bar-used>
+;label = RAM: %gb_used%/%gb_free%
+; label =  %gb_free%
+label =  %gb_used%
+; label = RAM:
+bar-used-indicator =
+bar-used-width = 50
+bar-used-foreground-0 = #55aa55
+bar-used-foreground-1 = #557755
+bar-used-foreground-2 = #f5a70a
+bar-used-foreground-3 = #ff5555
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+ramp-used-0 = ▁
+ramp-used-1 = ▂
+ramp-used-2 = ▃
+ramp-used-3 = ▄
+ramp-used-4 = ▅
+ramp-used-5 = ▆
+ramp-used-6 = ▇
+ramp-used-7 = █
+ramp-free-0 = ▁
+ramp-free-1 = ▂
+ramp-free-2 = ▃
+ramp-free-3 = ▄
+ramp-free-4 = ▅
+ramp-free-5 = ▆
+ramp-free-6 = ▇
+ramp-free-7 = █
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+use-ui-max = false
+interval = 5
+format-volume = <ramp-volume> <label-volume>
+label-muted = 婢muted
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+click-right = pavucontrol &
+
+;[module/notification-github]
+;type = custom/script
+;exec = ~/.config/polybar/scripts/notifications_github.sh
+;interval = 60
+
+[module/update-system]
+type = custom/script
+exec = ~/.config/polybar/scripts/update_system.sh --show
+interval = 1000
+;label = %output%
+;format-prefix = " "
+click-left = ~/.config/polybar/scripts/update_system.sh --open-terminal
+
+[module/clock]
+type = internal/date
+;date = " %A, %d %B  %R"
+date = " %R"
+
+[module/calendar-google]
+type = custom/script
+exec = ~/.config/polybar/scripts/calendar_google.sh --calendar
+interval = 3
+click-left = ~/.config/polybar/scripts/calendar_google.sh --open
+
+;[module/spotify]
+;type = custom/script
+;exec = python3 ~/.config/polybar/scripts/polybar_spotify.py
+;interval = 1000
+
+;[module/pacman-updates]
+;type = custom/script
+;exec = checkupdates | wc -l
+;interval = 1000
+;label = Repo: %output%
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0

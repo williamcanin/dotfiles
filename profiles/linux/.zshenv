@@ -1,0 +1,1 @@
+source "$HOME/.term/env.sh"

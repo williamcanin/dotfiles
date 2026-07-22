@@ -1,0 +1,8 @@
+{
+  "active": "linux",
+  "profiles": {
+    "linux": {
+      "description": "Dotfiles Arch Linux"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Open in VSCode
+Comment=Open the selected folder in VSCode
+Exec=code "%F"
+Icon-Name=visual-studio-code
+Selection=any
+Extensions=dir;

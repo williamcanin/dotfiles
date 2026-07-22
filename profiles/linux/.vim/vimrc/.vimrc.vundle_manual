@@ -1,0 +1,207 @@
+ syntax on
+ set background=dark
+
+" File-type
+ filetype on
+ filetype off
+
+ " Correting errors
+ let g:ale_emit_conflict_warnings = 0
+
+" Tabs and Spaces
+ set tabstop=2
+ set shiftwidth=2
+ set softtabstop=2
+ set backspace=indent,eol,start
+ set expandtab
+ set autoindent
+ set smartindent
+ set smarttab
+
+ " Misc
+ set guifont=Monospace\ 11
+ set digraph
+ set number
+ set ruler
+ set showcmd
+ set showmatch
+ set hlsearch
+ set wrap
+ set linebreak
+ set visualbell
+ set hidden
+ set modeline
+ set autoread       " auto-reload modified files (with no local changes)
+ set nocompatible   " don't try to be compatible with vi
+ set ignorecase     " ignore case in search
+ set smartcase      " override ignorecase if uppercase is used in search string
+ set report=0       " report all changes
+ set laststatus=2   " always show status-line
+ set cursorline     " highlight current line
+ set scrolloff=4
+ set nofoldenable
+ set shell=/bin/bash
+ set mouse=a
+ set autowrite
+
+ " Swaps and backups
+ set nobackup                           " do not keep backups after close
+ set nowritebackup                      " do not keep a backup while working
+ set noswapfile                         " don't keep swp files either
+ set backupdir=$HOME/.vim/backup        " store backups under ~/.vim/backup
+ set backupcopy=yes                     " keep attributes of original file
+ set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
+ set directory=~/.vim/swap,~/tmp,.      " keep swp files under ~/.vim/swap
+ set undofile
+ set undodir=~/.vim/undo
+ set undoreload=10000
+
+" Show trailing whitespace
+" set list listchars=tab:→\ ,trail:·
+
+
+" ######## Vundle #########
+" Install Vundle: https://github.com/VundleVim/Vundle.vim
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Load Plugins - By https://vimawesome.com
+call vundle#begin()
+
+	" NERDTree
+	" Plugin 'scrooloose/nerdtree'
+
+	" SnipMate
+	Plugin 'MarcWeber/vim-addon-mw-utils'
+  	Plugin 'tomtom/tlib_vim'
+  	Plugin 'garbas/vim-snipmate'
+    " Optional:
+    " Plugin 'honza/vim-snippets'
+
+	" Bootstrap 4 markup snippets for Vim
+	Plugin 'jvanja/vim-bootstrap4-snippets'
+
+    " Syntax checking hacks for vim
+    " Plugin 'scrooloose/syntastic'
+
+    " CoffeeScript support for vim
+    Plugin 'kchmck/vim-coffee-script'
+
+    " Rails.vim: Ruby on Rails power tools
+    Plugin 'tpope/vim-rails'
+
+    " Vim/Ruby Configuration Files
+    Plugin 'vim-ruby/vim-ruby'
+
+    " Textile for VIM
+    " Plugin 'timcharper/textile.vim'
+
+    " An extensible & universal comment vim-plugin that also handles embedded filetypes
+    " Plugin 'tomtom/tcomment_vim'
+
+    " Markdown Vim Mode
+    Plugin 'plasticboy/vim-markdown'
+
+    " Syntax file for jQuery in ViM
+    Plugin 'nono/jquery.vim'
+
+    " Typescript syntax files for Vim
+    Plugin 'leafgarland/typescript-vim'
+
+    " Python syntax highlighting script for Vim
+    Plugin 'hdima/python-syntax'
+
+    Plugin 'davidhalter/jedi-vim'
+
+    Plugin 'vim-scripts/indentpython.vim'
+
+    Plugin 'vim-syntastic/syntastic'
+
+    Plugin 'nvie/vim-flake8'
+
+    " List of JavaScript ES6 snippets and syntax highlighting for vim.
+    " Plugin 'isruslan/vim-es6'
+
+    " Javascript - Snippets
+	Plugin 'grvcoelho/vim-javascript-snippets'
+
+	" Vastly improved Javascript indentation and syntax support in Vim.
+	Plugin 'pangloss/vim-javascript'
+
+	" SCSS - Snippets
+	" Plugin 'kwaledesign/scss-snippets'
+	Plugin 'JulesWang/css.vim'
+	Plugin 'cakebaker/scss-syntax.vim'
+
+	" A code-completion engine for Vim
+	" Plugin 'valloric/youcompleteme'
+
+	" True Sublime Text style multiple selections for Vim
+	" Plugin 'terryma/vim-multiple-cursors'
+
+	" Vim plugin with sass/scss color variable highlighting (works with imports)
+	Plugin 'shmargum/vim-sass-colors'
+
+	" Pandoc integration and utilities for vim
+	" Plugin 'vim-pandoc/vim-pandoc'
+
+	" Bash IDE -- Insert code snippets, run, check and debug the code and look up help
+	" Plugin 'bash-support.vim'
+
+	" Surround.vim: quoting/parenthesizing made simple
+	" Plugin 'tpope/vim-surround'
+
+	" The missing motion for Vim :athletic_shoe:
+	" Plugin 'justinmk/vim-sneak'
+
+	" :deciduous_tree: Low-contrast Vim color scheme based on Seoul Colors
+	" Plugin 'junegunn/seoul256.vim'
+
+	" Adds CSS autoprefixer support to Vim.
+	" Plugin 'vim-autoprefixer'
+
+	" Low contrast colour scheme for low light conditions
+	" Plugin 'Zenburn'
+
+	" Vim-code-dark color scheme
+	" Plugin 'tomasiser/vim-code-dark'
+
+	" Vimtom Colorscheme
+	" Plugin 'larsbs/vimtom'
+
+	" Rainglow Collection 320 colors theme.
+	  Plugin 'rainglow/vim'
+
+call vundle#end()
+
+let python_highlight_all=1
+syntax on
+filetype plugin indent on 
+
+" ######## Vundle #########
+
+
+" Start NERDTree
+" autocmd VimEnter * NERDTree
+
+" Themes 
+ " JellyBeans (Install package 'vim-jellybeans' in your distro Linux)
+ " colorscheme jellybeans
+ 
+ " Atom (Manual)
+  colorscheme atom-dark-256
+
+ " Seoul Colors
+ " colorscheme seoul256
+
+ " Zenburn
+ " colorscheme zenburn
+
+ " Vim Code Dark
+ " colorscheme codedark
+
+ " Vimtom
+ " colorscheme vimtom
+
+" automatically reload vimrc when it's saved
+ au BufWritePost .vimrc so ~/.vimrc

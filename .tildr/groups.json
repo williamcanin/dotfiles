@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "shell": [
+      ".term/aliases.sh",
+      ".term/behavior.sh",
+      ".term/colors.sh",
+      ".term/env.sh",
+      ".term/init.sh",
+      ".term/zsh_history_info.txt"
+    ]
+  }
+}

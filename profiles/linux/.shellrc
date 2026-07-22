@@ -1,0 +1,206 @@
+## ========================================= ##
+##                Settings ZSH               ##
+## ========================================= ##
+## Author: William C. Canin
+
+## ================================================
+## Local bin
+## ================================================
+
+SH_USER_BIN_CUSTOM="${HOME}/.local/sh/bin"
+SH_USER_LIB_CUSTOM="${HOME}/.local/sh/lib"
+LOCAL_BIN="${HOME}/.local/bin"
+export PATH=$PATH:$SH_USER_BIN_CUSTOM:$SH_USER_LIB_CUSTOM:$LOCAL_BIN
+
+## =================================================
+## Poetry (via script "get-poetry.py")
+## =================================================
+
+# if [[ -f "$HOME/.poetry/bin" ]]; then
+#     export PATH="$HOME/.poetry/bin:$PATH"
+# fi
+
+## ================================================
+## RBENV - https://github.com/rbenv/rbenv
+## ================================================
+
+# if [[ -d "$HOME/.rbenv/bin" ]]; then
+#     export PATH="$PATH:$HOME/.rbenv/bin"
+#       if [[ $(echo $SHELL) == "/usr/bin/zsh" ]] || [[ $(echo $SHELL) == "/bin/zsh" ]]; then
+#         eval "$(rbenv init - zsh)"
+#       else
+#         eval "$(rbenv init - bash)"
+#       fi
+# fi
+
+# if which ruby >/dev/null && which gem >/dev/null; then
+#     GEM_PATH="$(ruby -e 'puts Gem.user_dir')"
+#     GEM_HOME="$GEM_PATH"
+#     GEM_BIN="$GEM_PATH/bin"
+#     export PATH="$GEM_PATH:$GEM_HOME:$GEM_BIN:$PATH"
+# fi
+
+## ================================================
+## Golang
+## ================================================
+
+# GO_PATH="$HOME/.go"
+# GO_PATH_BIN="$GO_PATH/bin"
+# GO_GITHUB="$GO_PATH/src/github.com/$(git config user.github)"
+# [[ ! -d $GO_GITHUB ]] && mkdir -p "$GO_GITHUB"
+# export PATH=$PATH:$GO_PATH:$GO_PATH_BIN:$GO_GITHUB
+
+## ================================================
+## Laravel
+## ================================================
+
+# if [ -d "${HOME}/.config/composer/vendor/bin" ]; then
+#   LARAVEL="${HOME}/.config/composer/vendor/bin"
+#   export PATH="$LARAVEL:$PATH"
+# fi
+
+## ================================================
+## Java
+## ================================================
+
+# JAVA_HOME="/usr/lib/jvm/default"
+# if [[ -d $JAVA_HOME ]]; then
+#     export PATH="$JAVA_HOME/bin:$PATH"
+# fi
+
+## ================================================
+## Android SDK
+## ================================================
+
+if [[ -d "$HOME/Android/Sdk" ]]; then
+   ANDROID="$HOME/Android/Sdk"
+   ANDROID_HOME="$ANDROID"
+   ANDROID_SDK_ROOT="$ANDROID"
+   ANDROID_BIN="/opt/android-studio/bin"
+   export PATH=$PATH:$ANDROID_BIN
+   export PATH=$PATH:$ANDROID_SDK_ROTT
+   export PATH=$PATH:$ANDROID_HOME/emulator
+   export PATH=$PATH:$ANDROID_HOME/tools
+   export PATH=$PATH:$ANDROID_HOME/tools/bin
+   export PATH=$PATH:$ANDROID_HOME/platform-tools
+   export PATH="$ANDROID:$ANDROID_HOME:$PATH"
+fi
+
+## ================================================
+## Flutter
+## ================================================
+
+# if [ -d "/opt/flutter" ]; then
+#     FLUTTER_HOME="/opt/flutter"
+#     FLUTTER_BIN="$FLUTTER_HOME/bin"
+#     export PATH="$FLUTTER_HOME:$FLUTTER_BIN:$PATH"
+# fi
+
+## ================================================
+## Snap (Archlinux)
+## ================================================
+
+# os=$(cat /etc/os-release | grep ^NAME | cut -d'=' -f2)
+# if [[ $os == "Arch Linux" ]]; then
+# 	## Create link: ln -sF /var/lib/snapd/snap /snap
+# 	SNAP_BIN="/snap/bin"
+# 	export PATH=$PATH:$SNAP_BIN
+# fi
+
+## ================================================
+## XDG_DATA_DIRS - FlatPak
+## ================================================
+
+# if [[ -d "/var/lib/flatpak/exports/share" ]]; then
+#     FLATPAK_SYS="/var/lib/flatpak/exports/share"
+#     FLATPAK_USER="$HOME/.local/share/flatpak/exports/share"
+#     XDG_DATA_DIRS="$FLATPAK_SYS:$FLATPAK_USER:$XDG_DATA_DIRS"
+# fi
+
+## ================================================
+## WINE Configuration
+## ================================================
+
+# if [[ -d "$HOME/.wine" ]]; then
+#     WINEARCH=''win32''
+#     WINEPREFIX="$HOME/.wine"
+#     PATH="$PATH:$WINEARCH:$WINEPREFIX"
+# fi
+
+## ================================================
+## Cowsay
+## ================================================
+
+#if  which cowsay >/dev/null ; then
+#    people=$(whoami)
+#	cowsay -f tux "Welcome back, ${people}"
+#fi
+
+## ================================================
+## Jayatana for "vala-panel-appmenu" in XFCE
+## ================================================
+
+## See: https://github.com/rilian-la-te/vala-panel-appmenu
+# export _JAVA_OPTIONS="${_JAVA_OPTIONS} -javaagent:/usr/share/java/jayatanaag.jar"
+# export JAVA_TOOL_OPTIONS=-javaagent:/usr/share/java/jayatanaag.jar
+# export JAYATANA_FORCE=1
+
+## ================================================
+## Dotctrl
+## ================================================
+
+export DOTCTRL_PATH="/home/.dotfiles/linux"
+
+## ================================================
+## Nodenv
+## ================================================
+
+# if [[ -f "/usr/bin/nodenv" ]]; then
+#     eval "$(nodenv init -)"
+# fi
+
+## ================================================
+## Pyenv
+## ================================================
+
+if [[ -d "$HOME/.pyenv" ]]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+fi
+
+## ================================================
+## Direnv
+## ================================================
+
+if [[ -f "$(which direnv)" ]]; then
+  if [[ $(echo $SHELL) == "/usr/bin/zsh" ]] || [[ $(echo $SHELL) == "/bin/zsh" ]]; then
+    eval "$(direnv hook zsh)"
+  else
+    eval "$(direnv hook bash)"
+  fi
+fi
+
+## ================================================
+## Python Click
+## ================================================
+
+eval "$(_CLICK_TEST.PY_COMPLETE=source_zsh click_test.py 2>/dev/null)"
+
+## ================================================
+## Vulkan
+## ================================================
+
+#VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/nvidia_icd.json"
+#if [[ -f $VK_ICD_FILENAMES ]]; then
+#  export PATH="$PATH:$VK_ICD_FILENAMES"
+#fi
+
+## ================================================
+## Applications NodeJS in $HOME (node_modules)
+## ================================================
+
+if [[ -d "$HOME/node_modules/.bin" ]]; then
+   YARN_BIN_USER="$HOME/node_modules/.bin"
+   export PATH="$PATH:$YARN_BIN_USER"
+fi

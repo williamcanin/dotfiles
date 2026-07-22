@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>preferences-system-search</icon>
+	<name>Pesquisar</name>
+	<submenu></submenu>
+	<unique-id>1579613087134761-1</unique-id>
+	<command>catfish %f</command>
+	<description>Pesquisar com Catfish</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Abrir terminal aqui</name>
+	<submenu></submenu>
+	<unique-id>1552566877857316-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Exemplo de uma ação personalizada</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>clamav</icon>
+	<name>Pesquisar vírus</name>
+	<submenu></submenu>
+	<unique-id>1553273710479401-2</unique-id>
+	<command>clamtk %F</command>
+	<description>Pesquisar vírus</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>visual-studio-code</icon>
+	<name>Abrir VS Code aqui</name>
+	<submenu></submenu>
+	<unique-id>1553274615627436-3</unique-id>
+	<command>code %f</command>
+	<description>Abrir VS Code neste diretório</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>/home/files/jetbrains/pycharm-community/bin/pycharm.png</icon>
+	<name>Abrir Pycharm aqui</name>
+	<submenu></submenu>
+	<unique-id>1575509940848625-1</unique-id>
+	<command>/home/files/jetbrains/pycharm-community/bin/pycharm.sh %f</command>
+	<description>Abrir Pycharm neste diretório</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<text-files/>
+</action>
+<action>
+	<icon>preferences-system-search</icon>
+	<name>Pesquisar (Old)</name>
+	<submenu></submenu>
+	<unique-id>1553273323653887-1</unique-id>
+	<command>gnome-search-tool --path=%f --contains=</command>
+	<description>Pesquisar arquivos e pastas</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>insert-link</icon>
+	<name>Criar Link</name>
+	<submenu></submenu>
+	<unique-id>1579613540147688-2</unique-id>
+	<command>ln -s %f &apos;Link para %n&apos;</command>
+	<description>Criar link simbólico</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Thunar Root</name>
+	<submenu></submenu>
+	<unique-id>1579924215348555-1</unique-id>
+	<command>pkexec thunar %f</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>security-high</icon>
+	<name>Excluir (com segurança)</name>
+	<submenu></submenu>
+	<unique-id>1661296991887968-1</unique-id>
+	<command>/usr/bin/strash -n 4 -p %N</command>
+	<description>Exclua arquivos com segurança</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>security-low</icon>
+	<name>Security Remove</name>
+	<submenu></submenu>
+	<unique-id>1661293162383641-1</unique-id>
+	<command>srm -rz %F</command>
+	<description>Security Remove</description>
+	<range></range>
+	<patterns>*</patterns>
+</action>
+<action>
+	<icon>user-trash-full</icon>
+	<name>Esvaziar Lixeira (com segurança)</name>
+	<submenu></submenu>
+	<unique-id>1661542512278990-1</unique-id>
+	<command>/usr/bin/strash</command>
+	<description>Usando sTrash para esvaziar a lixeira</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>

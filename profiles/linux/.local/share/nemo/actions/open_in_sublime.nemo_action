@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Open in Sublime
+Comment=Open the selected folder in Sublime
+Exec=subl "%F"
+Icon-Name=sublime-text
+Selection=any
+Extensions=dir;

@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Esvaziar Lixeira (com segurança)
+Comment=Esvazie a lixeira com segurança usando o sTrash
+Exec=strash
+Icon-Name=security-high
+Selection=any
+Extensions=dir;

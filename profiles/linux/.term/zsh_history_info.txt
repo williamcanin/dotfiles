@@ -1,0 +1,15 @@
+### --------------------- Restaurar o .zsh_history -------------------------
+
+## 1. Renomeie o arquivo atual para segurança
+## > cp -f ~/.zsh_history ~/.zsh_history_bad
+
+## 2. Use o comando 'strings' para extrair apenas o texto válido para um novo arquivo
+## > strings ~/.zsh_history_bad > ~/.zsh_history
+
+## 3. Force o Zsh a ler o novo arquivo limpo
+## > fc -R ~/.zsh_history
+
+## 4. (Opcional) Remova o arquivo corrompido se estiver tudo certo
+## > rm -f ~/.zsh_history_bad
+
+### --------------------- Restaurar o .zsh_history -------------------------

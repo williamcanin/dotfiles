@@ -1,0 +1,63 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+
+	"Print to console": {
+		"prefix": "#-*",
+		"body": [
+			"# -*- coding: utf-8 -*-",
+			""
+		],
+		"description": "Encoding UTF8 for Python"
+	},
+	"Setup Packaging Python": {
+		"prefix": "setuppy",
+		"body": [
+			"from setuptools import setup, find_packages",
+			"from os.path import dirname, abspath, join",
+			"",
+			"",
+			"with open('README.md') as f:",
+			"	long_description = f.read()",
+			"",
+			"ROOT = dirname(abspath(__file__))",
+			"requirements_dev = join(ROOT, 'requirements-dev.txt')",
+			"extras_require = {}",
+			"with open(requirements_dev) as f:",
+			"	extras_require['dev'] = [i.strip().split('#', 1)[0].strip()",
+			"							 for i in f.read().strip().split('\\n')]",
+			"",
+			"setup(",
+			"	name='programx',",
+			"	version='1.0.0',",
+			"	description='Example system',",
+			"	author='William Canin',",
+			"	author_email='william.costa.canin@gmail.com',",
+			"	license='MIT Licenses',",
+			"	maintainer='William Canin',",
+			"	long_description_content_type='text/markdown',",
+			"	long_description=long_description,",
+			"	url='https://github.com/williamcanin',",
+			"	packages=find_packages(include=['module_folder', 'module_folder.*']),",
+			"	platforms='any',",
+			"	extras_require=extras_require,",
+			"	setup_requires=['flake8'],",
+			"	classifiers=[",
+			"		'Programming Language :: Python :: 3',",
+			"		'License :: OSI Approved :: MIT License',",
+			"		'Operating System :: MacOS :: MacOS X',",
+			"		'Operating System :: Microsoft :: Windows',",
+			"		'Operating System :: POSIX',",
+			"		'Operating System :: POSIX :: Linux',",
+			"	],",
+			"	python_requires='>= 3.6',",
+			"	keywords='example',",
+			"	entry_points={'console_scripts': ['programx=module_folder.file_python:ClassProgram']},",
+			"	package_data={'module_folder': ['data/data.json', 'LICENSE', 'requirements-dev.txt']}",
+			")",
+		],
+		"description": "Setup.py Packaging for Python"
+	}
+}

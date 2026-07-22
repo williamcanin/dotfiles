@@ -1,0 +1,13 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"CFG Configuration Syntax Highlighting",
+		"INI",
+		"Package Control",
+		"Sass",
+	],
+	"in_process_packages":
+	[
+	],
+}

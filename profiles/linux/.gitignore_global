@@ -1,0 +1,80 @@
+# Useful .gitignore templates:
+#   - https://github.com/github/gitignore
+
+
+# OSX       taken from: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+# ----------------------------------------------------------------------------------------------
+._*
+.AppleDouble
+Zone.Identifier
+*.Identifier
+.DS_Store
+.Indentifier
+.localized
+.LSOverride
+.Spotlight-V100
+.Trashes
+Icon
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Windows   taken from: https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
+# ----------------------------------------------------------------------------------------------
+Desktop.ini
+ehthumbs.db
+Thumbs.db
+.BIN/
+
+# Linux
+# ----------------------------------------------------------------------------------------------
+*~
+
+
+# Tags      taken from: https://github.com/github/gitignore/blob/master/Global/Tags.gitignore
+# ----------------------------------------------------------------------------------------------
+# Ignore tags created by etags and ctags
+# TAGS
+# tags
+
+# Vim       taken from: https://github.com/github/gitignore/blob/master/Global/vim.gitignore
+# ----------------------------------------------------------------------------------------------
+.*.sw[a-z]
+.netrwhist
+*.un~
+Session.vim
+
+# Python
+# ----------------------------------------------------------------------------------------------
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+__pypackages__/
+*.Identifier
+
+# Environments
+# ----------------------------------------------------------------------------------------------
+
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Projects: common ignored files
+# ----------------------------------------------------------------------------------------------
+bower_components/
+node_modules/
+.continue/

@@ -1,0 +1,16 @@
+"*****************************************************************************
+"" Plug user install packages - By William C. Canin
+"*****************************************************************************
+
+" To add extra packages to vim, add them below
+" eg (for github):
+
+Plug 'timcharper/textile.vim'
+Plug 'nono/jquery.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'shmargum/vim-sass-colors'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'plasticboy/vim-markdown'
+Plug 'kchmck/vim-coffee-script'
+Plug 'jvanja/vim-bootstrap4-snippets'
+Plug 'dracula/vim', { 'as': 'dracula' }

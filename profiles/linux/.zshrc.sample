@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+
+### Load aliases
+    . "${HOME}/.aliasesrc"
+
+### Load ZSH behavior settings
+    # Note: If using Oh-My-ZSH there is no need to load these settings.
+    . "${HOME}/.zsh_behavior"
+
+### Load SThemes for ZSH
+    ## Note: If using Oh-My-ZSH or another theme, there is no need to load these settings.
+    . "${HOME}/.pyhack/pyhack.zsh-theme"
+    ## Starship (sudo pacman -S starship)
+    # eval "$(starship init zsh)"
+
+### Load environment variables from certain applications
+    . "${HOME}/.zsh_applications"

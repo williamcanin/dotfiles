@@ -1,0 +1,11 @@
+### Seagate
+#UUID=XXXXX-XXXXX /run/media/<USER>/files  exfat  uid=<USER>,gid=<USER>,umask=022,nofail  0  0
+
+### CDROM
+/dev/sr0  /media/cdrom0  udf,iso9660 user,noauto  0 0
+
+### Floppy
+/dev/fd0  /mnt/floppy  auto  defaults,user,noauto  0 0
+
+### Windows (optional)
+#UUID=XXXXX-XXXXX /mnt/windows  ntfs-3g defaults,user,rw,auto  0 0
