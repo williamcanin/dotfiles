@@ -1,7 +1,13 @@
 # Default
+
+__pycache__/
+.DS_Store
 *~
 *.log
 *.bak
 *.mkv
 *.mp4
-
+*.egg
+*.lock
+*.so
+*.cache
