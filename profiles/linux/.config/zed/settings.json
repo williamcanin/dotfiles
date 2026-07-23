@@ -1,0 +1,111 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "default_model": {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "enable_thinking": true
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "auto_install_extensions": {
+    "html": true,
+    "pyright": true,
+    "rust": true,
+    "cpp": true,
+    "python": true,
+    "css": true,
+    "sass": true,
+    "js-debug": true,
+    "bash": true,
+    "git-fire": true,
+    "toml": true,
+    "dependi": true,
+    "tailwind-contexual-colors": true,
+  },
+  "terminal": {
+    "cursor_shape": "underline",
+    "font_size": 15.0,
+    "font_family": ".ZedMono",
+  },
+  "prettier": {
+    "allowed": true,
+  },
+  "auto_indent": true,
+  "tab_size": 2,
+  "vim": {
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": true,
+  },
+  "minimap": {
+    "max_width_columns": 80,
+    "show": "auto",
+  },
+  "cursor_blink": true,
+  "preferred_line_length": 100,
+  "soft_wrap": "preferred_line_length",
+  "autosave": "on_window_change",
+  "ui_font_family": ".ZedMono",
+  "buffer_font_family": ".ZedMono",
+  "icon_theme": {
+    "mode": "system",
+    "light": "JetBrains New UI Icons (Dark)",
+    "dark": "JetBrains New UI Icons (Dark)",
+  },
+  "format_on_save": "on",
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "show_whitespaces": "none",
+  "file_scan_exclusions": [
+    "**/target",
+    "**/.git",
+    "**/.bundle-cache",
+    "**/.jekyll-cache",
+    "**/.idea",
+    "**/.vscode",
+    "**/Cargo.lock",
+    "**/package-lock.json",
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.venv",
+    "**/dist",
+    "**/_site",
+    "**/.cache",
+    "**/build",
+  ],
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "project_panel": {
+    "auto_reveal_entries": true,
+  },
+  "languages": {
+    "Markdown": {
+      "tab_size": 2,
+    },
+    "Rust": {
+      "tab_size": 2,
+    },
+    "Python": {
+      "tab_size": 4,
+    },
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "VSCode Dark Modern",
+  },
+}
