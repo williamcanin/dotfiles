@@ -1,6 +1,11 @@
+__pycache__/
+.DS_Store
 *~
 *.log
 *.mp4
 *.mkv
 *.bak
+*.lock
+*.so
+*.cache
 README.md
