@@ -1,8 +1,7 @@
 {
-
   // ===== APARÊNCIA / UI =====
   "workbench.colorTheme": "Dark Modern",
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
   "window.titleBarStyle": "custom",
   "window.menuBarVisibility": "toggle",
   "workbench.activityBar.location": "default",
@@ -166,6 +165,11 @@
     }
   },
 
+  // ===== RUBY =====
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "none"
+  },
+
   // ===== PYTHON =====
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
@@ -225,7 +229,6 @@
 
   // ===== AI / CHAT / COPILOT =====
   "chat.unifiedAgentsBar.enabled": true,
-  "chat.viewSessions.orientation": "stacked",
   "chatgpt.localeOverride": "pt-BR",
   "CodeGPT.apiKey": "Ollama",
   "gitlens.ai.model": "vscode",
@@ -240,14 +243,16 @@
   "github.copilot.nextEditSuggestions.enabled": false,
   "claudeCode.preferredLocation": "panel",
   "roo-cline.debug": false,
-  "roo-cline.allowedCommands": ["git log", "git diff", "git show"],
+  "roo-cline.allowedCommands": [
+    "git log",
+    "git diff",
+    "git show"
+  ],
   "roo-cline.deniedCommands": [],
 
   // ===== SPELL CHECK (cSpell) =====
   "cSpell.globRoot": "${workspaceFolder}",
-  "cSpell.ignorePaths": [
-    "**/.config/Code/User/settings.json"
-  ],
+  "cSpell.ignorePaths": ["**/.config/Code - OSS/User/settings.json"],
   "cSpell.customDictionaries": {
     "custom-dictionary-user": {
       "name": "custom-dictionary-user",
@@ -280,7 +285,20 @@
   "chat.tips.enabled": false,
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
-  }
-,
-  "material-code.primaryColor": ""
+  },
+  "material-code.primaryColor": "",
+  "redhat.telemetry.enabled": true,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.qrc": "default",
+    "*.qrc": "qt-core.qrcEditor"
+  },
+  "qt-core.additionalQtPaths": [
+    {
+      "name": "Qt-5.15.19-linux-g++-x86_64_from_PATH",
+      "path": "/usr/bin/qmake"
+    }
+  ],
+  "chat.viewSessions.orientation": "stacked",
+  "claudeCode.useTerminal": true
 }
