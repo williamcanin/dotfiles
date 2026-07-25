@@ -26,7 +26,7 @@ export WORKFLOW_PATH="$HOME/.workflow"
 
 ### [ Local Bins ] --------------------------------------------------------------------------
 
-export PATH="$HOME/.bin:$HOME/.bin/libs:$HOME/.local/python/bin:$HOME/node_modules/.bin:$HOME/.local/bin:$HOME/bin:$PATH"
+export PATH="$HOME/.bin:$HOME/.cargo/bin:$HOME/.bin/libs:$HOME/.local/python/bin:$HOME/node_modules/.bin:$HOME/.local/bin:$HOME/bin:$PATH"
 
 
 
