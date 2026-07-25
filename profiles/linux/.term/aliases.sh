@@ -160,7 +160,8 @@ alias copy='rsync -ah --progress'
 
 ### [ Clean trash ] ---------------------------------------------------------------------------
 
-alias etrash='rm -rfv $HOME/.local/share/Trash/*'
+#alias etrash='rm -rfv $HOME/.local/share/Trash/*'
+#alias trashe='trash-empty -f'
 
 
 
