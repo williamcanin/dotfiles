@@ -9,3 +9,5 @@ __pycache__/
 *.so
 *.cache
 README.md
+LICENSE
+Makefile
