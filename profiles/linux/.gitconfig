@@ -8,7 +8,7 @@
     github = "config user.github 'the333x2'"
 [http]
     postBuffer = 104857600
-    # sslCAInfo = /home/wcanin/.certs/squid-cert.pem
+    # sslCAInfo =  %(home)/.certs/squid-cert.pem
 [credential]
     helper = cache
 [color]
@@ -28,7 +28,7 @@
     changed   = green bold
     untracked = blue bold
 [core]
-    excludesfile = /home/boss/.gitignore_global
+    excludesfile =  %(home)/.gitignore_global
     editor = vim
 	autocrlf = input
 [merge]

@@ -300,10 +300,5 @@
     }
   ],
   "chat.viewSessions.orientation": "stacked",
-  "claudeCode.useTerminal": true,
-  "yaml.schemas": {
-    "file:///home/boss/.vscode-oss/extensions/continue.continue-2.0.0-linux-x64/config-yaml-schema.json": [
-      ".continue/**/*.yaml"
-    ]
-  }
+  "claudeCode.useTerminal": true
 }

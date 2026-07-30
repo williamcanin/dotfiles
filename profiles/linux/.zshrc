@@ -103,4 +103,4 @@ source "$HOME/.term/aliases.sh"
 # Starship
 eval "$(starship init zsh)"
 
-source /home/boss/.config/broot/launcher/bash/br
+source $HOME/.config/broot/launcher/bash/br

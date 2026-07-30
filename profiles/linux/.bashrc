@@ -166,4 +166,4 @@ unset MAILCHECK
 . "$HOME/.cargo/env"
 . "/home/rust/cargo/env"
 
-source /home/boss/.config/broot/launcher/bash/br
+source $HOME/.config/broot/launcher/bash/br
