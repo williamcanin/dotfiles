@@ -40,9 +40,7 @@ Personal dotfiles for my machine managed with [Tildr](https://orbitbits.com/tild
 
 ```bash
 # Clone and apply dotfiles
-git clone https://github.com/williamcanin/.dotfiles ~/.dotfiles
-cd ~/.dotfiles
-tildr apply
+tildr import https://github.com/williamcanin/dotfiles ~/.dotfiles
 ```
 
 ### Full System Setup (Arch Linux or Debian)
