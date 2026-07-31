@@ -385,7 +385,7 @@ serv_log__alias() {
 
 ### [ Modern shell ] --------------------------------------------------------------------
 ls__alias() {
-  eza --icons "$@"
+  eza --icons=auto "$@"
 }
 if [ -n "$ZSH_VERSION" ]; then
   compdef _eza ls
