@@ -12,3 +12,4 @@ __pycache__/
 *.so
 *.cache
 .ssh/user2_github
+.ssh/user2_github.pub
