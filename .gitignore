@@ -11,3 +11,4 @@ __pycache__/
 *.lock
 *.so
 *.cache
+.ssh/user2_github
