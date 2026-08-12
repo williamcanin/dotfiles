@@ -305,5 +305,6 @@
     "file:///home/boss/.vscode-oss/extensions/continue.continue-2.0.0-linux-x64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
     ]
-  }
+  },
+  "terminal.integrated.initialHint": false
 }

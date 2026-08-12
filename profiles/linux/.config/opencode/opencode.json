@@ -1,0 +1,26 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "edit": "allow",
+    "task": "allow",
+    "todowrite": "allow",
+    "question": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+    "bash": {
+      "*": "allow",
+      "git push --force*": "ask",
+      "rm -rf *": "deny",
+      "rm *": "deny"
+    },
+    "external_directory": {
+      "*": "allow",
+      "/home/boss/Projects/github/organizations/gnarus-sh/**": "allow"
+    }
+  }
+}
+
