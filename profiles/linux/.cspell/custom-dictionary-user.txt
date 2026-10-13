@@ -1,8 +1,10 @@
 # Custom Dictionary Words
 tilder
 canin
+opencode
 williamcanin
 evolv
+firefox
 seedctl
 codegemma
 println

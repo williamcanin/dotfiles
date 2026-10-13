@@ -1,6 +1,6 @@
 # Dependencies: Font Awesome 7
 #
-scan_timeout = 50
+scan_timeout = 1000
 command_timeout = 2000
 add_newline = true
 format = """
@@ -199,7 +199,7 @@ format = '[\($state( $progress_current of $progress_total)\)]($style) '
 cherry_pick = "[o PICKING](bold red)"
 
 [git_metrics]
-disabled = false
+disabled = true
 format = "([+$added](- green) [-$deleted](- red))"
 
 [git_status]

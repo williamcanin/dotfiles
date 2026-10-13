@@ -19,7 +19,8 @@
     },
     "external_directory": {
       "*": "allow",
-      "/home/boss/Projects/github/organizations/gnarus-sh/**": "allow"
+      "/home/boss/Projects/github/organizations/gnarus-sh/**": "allow",
+      "/home/rust/**": "allow"
     }
   }
 }

@@ -39,6 +39,10 @@
 
 export PATH="$HOME/.poetry/bin:$PATH"
 . "$HOME/.cargo/env"
-. "/home/rust/cargo/env"
+
 
 source $HOME/.config/broot/launcher/bash/br
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/boss/.local/bin:$PATH"

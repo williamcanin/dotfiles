@@ -130,10 +130,10 @@ alias off='_run_private'
 
 
 ### [ LOCALS Entry ] --------------------------------------------------------------------------
-alias hdd-git='cd /run/media/$USER/files/git'
+alias hdd-git='cd /seagate/files/git'
 alias orbitbits='cd /home/$USER/Projects/github/organizations/orbitbits'
 alias tilder-repo='cd "$(tilder repo path)"'
-
+alias argvus-repo='cd /home/$USER/Projects/github/organizations/argvus'
 
 
 ### [ ZSH ] -----------------------------------------------------------------------------------

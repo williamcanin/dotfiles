@@ -231,8 +231,6 @@
   "chat.unifiedAgentsBar.enabled": true,
   "chatgpt.localeOverride": "pt-BR",
   "CodeGPT.apiKey": "Ollama",
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilotcli:claude-sonnet-4.6",
   "github.copilot.enable": {
     "*": false,
     "plaintext": false,
@@ -306,5 +304,7 @@
       ".continue/**/*.yaml"
     ]
   },
-  "terminal.integrated.initialHint": false
+  "terminal.integrated.initialHint": false,
+  "claudeCode.hideOnboarding": true,
+  "makefile.configureOnOpen": false
 }

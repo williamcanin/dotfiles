@@ -50,7 +50,7 @@ export TRASH="$HOME/.local/share/Trash/files"
 ### [ LANG ] --------------------------------------------------------------------------------
 
 # export LANG=en_US.UTF-8
-export LANG=pt_BR.UTF-8
+# export LANG=pt_BR.UTF-8
 
 
 
