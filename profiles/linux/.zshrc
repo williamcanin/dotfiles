@@ -105,5 +105,3 @@ eval "$(starship init zsh)"
 
 source $HOME/.config/broot/launcher/bash/br
 
-# Colors by Hyprland
-. "$HOME/.config/term/options.sh"
