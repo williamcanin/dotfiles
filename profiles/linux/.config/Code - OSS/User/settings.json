@@ -105,6 +105,7 @@
 
   // ===== CODE ACTIONS =====
   "editor.codeActionsOnSave": {
+  
     "source.organizeImports": "explicit"
   },
   "editor.suggest.showSnippets": true,
@@ -306,5 +307,6 @@
   },
   "terminal.integrated.initialHint": false,
   "claudeCode.hideOnboarding": true,
-  "makefile.configureOnOpen": false
+  "makefile.configureOnOpen": false,
+  "editor.formatOnSave": true
 }

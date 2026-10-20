@@ -16,12 +16,6 @@
       "git push --force*": "ask",
       "rm -rf *": "deny",
       "rm *": "deny"
-    },
-    "external_directory": {
-      "*": "allow",
-      "/home/boss/Projects/github/organizations/gnarus-sh/**": "allow",
-      "/home/rust/**": "allow"
     }
-  }
 }
 

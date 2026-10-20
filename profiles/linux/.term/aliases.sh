@@ -11,7 +11,8 @@
 ### [ Temporary ] ----------------------------------------------------------------------------
 alias tildr='/home/$USER/Projects/github/organizations/orbitbits/tildr/target/x86_64-unknown-linux-gnu/debug/tildr'
 alias catalina='VBoxManage startvm macos-catalina'
-alias gitea-reload='sudo mount -a && systemctl --user restart gitea'
+alias gitlocal-reload='sudo mount -a && systemctl --user restart git-local.service'
+alias fjo='fj --host http://git.local'
 
 
 ### [ Modern shell ] -------------------------------------------------------------------------
